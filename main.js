@@ -23,12 +23,14 @@ sizeSelector.addEventListener("change", (event) => {
 
 //Task 3: Handle Stock Availability
 
-//create variables for either In Stock or Out of Stock
+//create variables for either In Stock or Out of Stock, and for button
 const inStock = document.getElementById("in-stock")
 const outOfStock = document.getElementById("out-of-stock")
 
-//disable purchase button if size is Out of Stock
-//outOfStock.addEventListener("change", ( => {}))
+//disable purchase button if size is In Stock
+outOfStock.addEventListener("change", () => {
+    button.disabled = true;
+})
 
 
 //Task 4: Create a Checkout Event
@@ -44,5 +46,3 @@ purchase.addEventListener("click", () => {
             alert("Size Out of Stock.")
     }
 })
-
-//I couldn't figure out how to fix the if statement above ^
